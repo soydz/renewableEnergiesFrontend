@@ -1,0 +1,23 @@
+<nav class="bg-slate-900 text-sm">
+    <div class="text-white flex justify-between mx-10">
+        <div class="flex items-center">
+            <img routerLink="/" src="images/logoRE.webp" class="h-7 w-auto mr-5 hover:scale-125 hover:cursor-pointer" />
+            <a routerLink="/energy-table" class="p-3 hover:text-slate-900 hover:bg-white">Datos</a>
+            <a routerLink="/graphics" class="p-3 hover:text-slate-900 hover:bg-white">Graficas</a>
+        </div>
+        <div *ngIf="isAuthenticated; else loggedOutTemplate" class="flex gap-1 items-center">
+            <div routerLink="/user-profile"
+                class="flex items-center justify-center text-lg text-slate-900 bg-white w-8 h-8 border rounded-full hover:cursor-pointer">
+                {{ getData() }}</div>
+            <div (click)="onLogOut()" class="hover:bg-white hover:text-slate-900 px-2 py-3 hover:cursor-pointer">Cerrar
+                sesión</div>
+        </div>
+
+        <ng-template #loggedOutTemplate>
+            <div class="flex items-center">
+                <a routerLink="/register" class="p-3 hover:text-slate-900 hover:bg-white">Registrarse</a>
+                <a routerLink="/user-login" class="p-3 hover:text-slate-900 hover:bg-white">Login</a>
+            </div>
+        </ng-template>
+    </div>
+</nav>

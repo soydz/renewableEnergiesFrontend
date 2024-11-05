@@ -1,0 +1,28 @@
+<div class="flex justify-center items-center text-sm">
+    <form [formGroup]="filtroForm" (ngSubmit)="onSubmit()" class="flex w-2/4 justify-between">
+        <div class="flex items-center">
+            <div class="pr-5">
+                <input type="radio" id="produccion" formControlName="energy" name="energy" class="mr-1"
+                    value="produccion" />
+                <label for="produccion">Producción</label>
+            </div>
+            <div class="">
+                <input type="radio" id="consumo" formControlName="energy" name="energy" class="mr-1" value="consumo" />
+                <label for="consumo">Consumo</label>
+            </div>
+        </div>
+        <div class="flex items-center">
+            <label for="year">Año:</label>
+            <select id="items" name="items" formControlName="year" class="p-1 ml-1 rounded">
+                <option *ngFor="let item of listYear" [value]="item">{{ item }}</option>
+            </select>
+        </div>
+        <div class="flex items-center">
+            <label for="year">Region:</label>
+            <select id="items" name="items" formControlName="region" class="p-1 ml-1 rounded">
+                <option *ngFor="let item of listRegion" [value]="item">{{ item }}</option>
+            </select>
+        </div>
+        <button type="submit" class="bg-slate-900 text-white rounded px-5 py-1">Filtrar</button>
+    </form>
+</div>

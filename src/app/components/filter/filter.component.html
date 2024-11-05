@@ -1,0 +1,27 @@
+<div class="flex justify-center items-center text-sm">
+    <form [formGroup]="filtroForm" (ngSubmit)="onSubmit()" class="flex w-2/4 justify-between">
+        <div class="flex items-center">
+            <div class="pr-5">
+                <input type="radio" id="solar" formControlName="typeEnergy" name="typeEnergy" class="mr-1"
+                    value="solar" />
+                <label for="solar">Solar</label>
+            </div>
+            <div class="">
+                <input type="radio" id="hydro" formControlName="typeEnergy" name="typeEnergy" class="mr-1"
+                    value="hydro" />
+                <label for="hydro">Hydro</label>
+            </div>
+            <div class="pl-5">
+                <input type="radio" id="wind" formControlName="typeEnergy" name="typeEnergy" class="mr-1"
+                    value="wind" />
+                <label for="wind">Wind</label>
+            </div>
+        </div>
+        <div>
+            <label for="year">Año</label>
+            <input type="number" min="1965" max="2021" id="year" formControlName="year" class="border rounded p-1 ml-2" />
+        </div>
+        <button type="submit" class="bg-slate-900 text-white rounded px-5 py-1">Filtrar</button>
+    </form>
+
+</div>

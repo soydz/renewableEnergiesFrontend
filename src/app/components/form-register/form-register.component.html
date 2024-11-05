@@ -1,0 +1,29 @@
+<form [formGroup]="registroUserForm" (ngSubmit)="onSubmit()"
+    class="flex flex-col gap-4 w-2/6 border p-10 rounded text-sm">
+    <h3 class="text-center font-semibold text-2xl">Crea tu cuenta</h3>
+    <div>
+        <label for="username" class="w-1/4">username</label>
+        <input type="text" id="username" formControlName="username" placeholder="sofia545"
+            class="w-full border rounded p-1" />
+    </div>
+    <div>
+        <label for="name" class="w-1/4">Nombre</label>
+        <input type="text" id="name" formControlName="name" placeholder="sofia" class="w-full border rounded p-1" />
+    </div>
+    <div>
+        <label for="lastname" class="w-1/4">Apellido</label>
+        <input type="text" id="lastname" formControlName="lastname" placeholder="valencia"
+            class="w-full border rounded p-1" />
+    </div>
+    <div>
+        <label for="email" class="w-1/4">Correo</label>
+        <input type="email" id="email" formControlName="email" placeholder="sofievale@mail.com"
+            class="w-full border rounded p-1" />
+    </div>
+    <div>
+        <label for="password" class="w-1/4">Contraseña</label>
+        <input type="password" id="password" formControlName="password" placeholder="*******"
+            class="w-full border rounded p-1" />
+    </div>
+    <button type="submit" class="w-full bg-slate-900 text-white py-1 rounded">Crear cuenta</button>
+</form>

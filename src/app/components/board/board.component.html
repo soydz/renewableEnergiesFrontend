@@ -1,0 +1,23 @@
+<div class="text-sm">
+    <table class="min-w-full">
+        <thead>
+            <tr class="border-b text-center">
+                <th class="py-2">Pais</th>
+                <th class="py-2">Año</th>
+                <th class="py-2">Tipo de energia</th>
+                <th class="py-2">Producción</th>
+                <th class="py-2">Consumo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listEnergy" class="border-b text-center">
+                <td class="py-3">{{ item.country }}</td>
+                <td class="py-3">{{ item.year }}</td>
+                <td class="py-3">{{ item.typeEnergy }}</td>
+                <td class="py-3">{{ item.production }}</td>
+                <td class="py-3">{{ item.consumption }}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

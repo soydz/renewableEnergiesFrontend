@@ -1,0 +1,11 @@
+<app-nav />
+<div *ngIf="isAuthenticated">
+    <app-graphics-filter class="p-8" (filtroEvent)="receiveFiltroDatos($event)" ></app-graphics-filter>
+    <app-bar-chart [dataFiltrada]="dataFiltrada" ></app-bar-chart>
+</div>
+<div *ngIf="!isAuthenticated" style="height: 90vh;" class="flex flex-row justify-center items-center text-lg">
+    <div class=" border border-slate-900 rounded flex flex-col items-center gap-4 p-4">
+        <p>Para ver esta pagina necesitas loguearte</p>
+        <button (click)="goToLoggin()" class="bg-slate-900 text-white rounded py-1 px-3 w-full">Iniciar sesión</button>
+    </div>
+</div>

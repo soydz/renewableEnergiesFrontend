@@ -1,0 +1,33 @@
+<app-nav></app-nav>
+<div class="flex justify-center mt-10">
+    <div>
+        <form [formGroup]="dataUserForm" (ngSubmit)="updateUser()"
+            class="flex flex-col gap-4 border border-slate-900 rounded p-10">
+            <div class="flex items-center gap-3">
+                <label class="font-semibold">Usuario</label>
+                <input class=" rounded py-1 px-2" type="text" formControlName="userName" readonly />
+            </div>
+            <div class="flex items-center gap-3">
+                <label for="nombre" class="font-semibold">Nombre</label>
+                <input id="nombre" class="border rounded py-1 px-2" type="text" formControlName="name" />
+            </div>
+            <div class="flex items-center gap-3">
+                <label for="Apellido" class="font-semibold">Apellido</label>
+                <input id="apellido" class="border rounded py-1 px-2" type="text" formControlName="lastName" />
+            </div>
+            <div class="flex items-center gap-3">
+                <label for="email" class="font-semibold">Correo</label>
+                <input id="email" class="border rounded py-1 px-2" type="text" formControlName="email" />
+            </div>
+            <button class="bg-slate-900 text-white rounded p-1 mt-3" type="submit">Actualizar</button>
+        </form>
+
+        <form [formGroup]="deleteUserForm">
+            <div class="flex gap-2 mt-5 text-lg" *ngIf="deleteUser">
+                <input id="delete" name="delete" type="checkbox" formControlName="check" />
+                <label for="delete">Estas seguro que deseas eliminar la cuenta</label>
+            </div>
+        </form>
+        <button (click)="btnDelete()" class="bg-red-500 text-white rounded py-2 px-5 mt-5">Eliminar cuenta</button>
+    </div>
+</div>

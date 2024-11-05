@@ -1,0 +1,18 @@
+<form [formGroup]="logginUserForm" (ngSubmit)="onSubmit()"
+    class="flex flex-col gap-6 w-2/6 border p-10 rounded text-sm">
+    <h3 class="text-center font-semibold text-2xl">Inicia sesión</h3>
+    <div class="items-center">
+        <label for="username">username</label>
+        <input type="text" id="username" formControlName="userName" placeholder="sofia545"
+            class="w-full border rounded p-1" />
+    </div>
+    <div class="items-center">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" formControlName="password" placeholder="*******"
+            class="w-full border rounded p-1" />
+    </div>
+    <div class="">
+        <p>¿No tienes una cuenta? <a routerLink="/register" class="text-blue-700">Registrarse</a></p>
+    </div>
+    <button type="submit" class="w-full bg-slate-900 text-white py-1 rounded">Iniciar sesión</button>
+</form>

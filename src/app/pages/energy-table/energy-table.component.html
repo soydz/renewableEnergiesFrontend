@@ -1,0 +1,10 @@
+<div class="grid min-h-dvh grid-rows-[auto_auto_1fr_auto]">
+    <app-nav />
+    <app-filter class="p-8" (filtroEvent)="receiveFiltroDatos($event)" />
+    <div class="flex justify-center pt-3">
+        <div class="w-4/5">
+            <app-board [listEnergy]="listEnergy" />
+        </div>
+    </div>
+    <app-pagination class="pb-4" (pageEvent)="receivePage($event)" [totalPagesEvent]="totalPages" />
+</div>
